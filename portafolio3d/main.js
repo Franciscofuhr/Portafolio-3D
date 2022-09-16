@@ -1,6 +1,12 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import faltaUnoPic from "./faltaUno.png" 
+import franFOTOCVPic from "./FranFOTOCV.png" 
+import moonPic from "./moon.jpg" 
+import spacePic from "./space.jpg" 
+import healthierPic from "./healthier.png" 
+import technologyPic from "./technology.png" 
 
 // Setup
 
@@ -60,12 +66,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(spacePic);
 scene.background = spaceTexture;
 
 // Avatar
 
-const franTexture = new THREE.TextureLoader().load('FranFOTOCV.png');
+const franTexture = new THREE.TextureLoader().load(franFOTOCVPic);
 
 const fran = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: franTexture }));
 
@@ -73,7 +79,7 @@ scene.add(fran);
 fran.rotation.y=-0.5
 // Avatar
 
-const technologysTexture = new THREE.TextureLoader().load('technology.png');
+const technologysTexture = new THREE.TextureLoader().load(technologyPic);
 
 const technologys = new THREE.Mesh(new THREE.BoxGeometry(40,20,10), new THREE.MeshBasicMaterial({ map: technologysTexture }));
 scene.add(technologys);
@@ -82,7 +88,7 @@ technologys.position.y=-4
 technologys.position.z = -25;
 technologys.position.setX(175);
 
-const faltaUnoTexture = new THREE.TextureLoader().load('faltaUno.png');
+const faltaUnoTexture = new THREE.TextureLoader().load(faltaUnoPic);
 
 const faltaUno = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshBasicMaterial({ map: faltaUnoTexture }));
 scene.add(faltaUno);
@@ -90,7 +96,7 @@ faltaUno.rotation.y=-0.5
 faltaUno.position.z = -15;
 faltaUno.position.setX(101);
 
-const HealthierTexture = new THREE.TextureLoader().load('healthier.png');
+const HealthierTexture = new THREE.TextureLoader().load(healthierPic);
 
 
 const Healthier = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshBasicMaterial({ map: HealthierTexture }));
@@ -100,7 +106,7 @@ Healthier.position.z = -14;
 Healthier.position.setX(142.5);
 // // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const moonTexture = new THREE.TextureLoader().load(moonPic);
 const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const moon = new THREE.Mesh(
